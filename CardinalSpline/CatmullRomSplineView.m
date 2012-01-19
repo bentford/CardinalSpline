@@ -9,6 +9,7 @@
 #import "CatmullRomSplineView.h"
 
 #define kPointSize 10
+#define kHandleMultiplier 5.0f
 
 @interface CatmullRomSplineView(PrivateMethods)
 
@@ -29,11 +30,11 @@
     if (self) {
         self.backgroundColor = [UIColor whiteColor];
         self.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
-        self.handle1 = CGPointMake(10.0f, 450.0f);
-        self.handle2 = CGPointMake(320.0f, 240.0f);
+        self.handle1 = CGPointMake(10.0f, 250.0f);
+        self.handle2 = CGPointMake(300.0f, 240.0f);
         
         self.point1 = CGPointMake(100.0f, 190.0f);
-        self.point2 = CGPointMake(280.0f, 290.0f);
+        self.point2 = CGPointMake(220.0f, 270.0f);
         
         UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
         pan.cancelsTouchesInView = NO;
@@ -51,8 +52,31 @@
     CGContextSetStrokeColorWithColor(context, [UIColor blueColor].CGColor);
     CGContextMoveToPoint(context, point1.x, point1.y);
     for( CGFloat t = 0.0f; t < 1.01f; t += 0.05f ) {
-        CGFloat x = [self catmullRomForTime:t p0:handle1.x p1:point1.x p2:point2.x p3:handle2.y];
-        CGFloat y = [self catmullRomForTime:t p0:handle1.y p1:point1.y p2:point2.y p3:handle2.y];
+        CGPoint multipliedHandle1;
+        CGPoint multipliedHandle2;
+        
+        if( handle1.y > point1.y )
+            multipliedHandle1.y = handle1.y + (handle1.y-point1.y)*kHandleMultiplier;
+        else
+            multipliedHandle1.y = handle1.y - (point1.y-handle1.y)*kHandleMultiplier;
+        
+        if( handle1.x > point1.x )
+            multipliedHandle1.x = handle1.x + (handle1.x-point1.x)*kHandleMultiplier;
+        else
+            multipliedHandle1.x = handle1.x - (point1.x-handle1.x)*kHandleMultiplier;
+        
+        if( handle2.y > point2.y )
+            multipliedHandle2.y = handle2.y + (handle2.y-point2.y)*kHandleMultiplier;
+        else
+            multipliedHandle2.y = handle2.y - (point2.y-handle2.y)*kHandleMultiplier;
+        
+        if( handle2.x > point2.x )
+            multipliedHandle2.x = handle2.x + (handle2.x-point2.x)*kHandleMultiplier;
+        else
+            multipliedHandle2.x = handle2.x - (point2.x-handle2.x)*kHandleMultiplier;
+        
+        CGFloat x = [self catmullRomForTime:t p0:multipliedHandle1.x p1:point1.x p2:point2.x p3:multipliedHandle2.x];
+        CGFloat y = [self catmullRomForTime:t p0:multipliedHandle1.y p1:point1.y p2:point2.y p3:multipliedHandle2.y];
         CGContextAddLineToPoint(context, x, y);
     }
     CGContextStrokePath(context);
@@ -82,26 +106,6 @@
                   (-P0 + 3*P1- 3*P2 + P3) * powf(t, 3.0f));
 }
 
-- (void)tap:(UITapGestureRecognizer *)tapGesture {
-    CGPoint touchPoint = [tapGesture locationInView:self];
-    
-    if( CGRectContainsPoint([self rectForPoint:point1], touchPoint) == YES )
-        dragPoint = &point1;
-    else if( CGRectContainsPoint([self rectForPoint:point2], touchPoint) == YES )
-        dragPoint = &point2;
-    else if( CGRectContainsPoint([self rectForPoint:handle1], touchPoint) == YES )
-        dragPoint = &handle1;
-    else if( CGRectContainsPoint([self rectForPoint:handle2], touchPoint) == YES )
-        dragPoint = &handle2;
-    else
-        dragPoint = nil;
-    
-    if( dragPoint != nil )
-        NSLog(@"captured point: %@", NSStringFromCGPoint(*dragPoint));
-    else
-        NSLog(@"no point found");
-}
-
 - (void)pan:(UIPanGestureRecognizer *)panGesture {
 
     CGPoint touchPoint = [panGesture locationInView:self];
@@ -124,7 +128,6 @@
             NSLog(@"no point found");
 
     } else if( panGesture.state == UIGestureRecognizerStateChanged ) {
-        //NSLog(@"dragging: %@", NSStringFromCGPoint(touchPoint));
         if( dragPoint != nil ) {
             dragPoint->x = touchPoint.x;
             dragPoint->y = touchPoint.y;
