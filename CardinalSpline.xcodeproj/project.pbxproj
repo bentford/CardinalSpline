@@ -1,0 +1,287 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B569D62414C8CE6E00F46D4B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B569D62314C8CE6E00F46D4B /* UIKit.framework */; };
+		B569D62614C8CE6E00F46D4B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B569D62514C8CE6E00F46D4B /* Foundation.framework */; };
+		B569D62814C8CE6E00F46D4B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B569D62714C8CE6E00F46D4B /* CoreGraphics.framework */; };
+		B569D62E14C8CE6E00F46D4B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B569D62C14C8CE6E00F46D4B /* InfoPlist.strings */; };
+		B569D63014C8CE6E00F46D4B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B569D62F14C8CE6E00F46D4B /* main.m */; };
+		B569D63414C8CE6E00F46D4B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B569D63314C8CE6E00F46D4B /* AppDelegate.m */; };
+		B569D63714C8CE6E00F46D4B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B569D63614C8CE6E00F46D4B /* ViewController.m */; };
+		B569D63A14C8CE6E00F46D4B /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B569D63814C8CE6E00F46D4B /* ViewController.xib */; };
+		B569D64514C8CF0200F46D4B /* CatmullRomSplineView.m in Sources */ = {isa = PBXBuildFile; fileRef = B569D64414C8CF0200F46D4B /* CatmullRomSplineView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B569D61F14C8CE6E00F46D4B /* CardinalSpline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardinalSpline.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B569D62314C8CE6E00F46D4B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B569D62514C8CE6E00F46D4B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B569D62714C8CE6E00F46D4B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B569D62B14C8CE6E00F46D4B /* CardinalSpline-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CardinalSpline-Info.plist"; sourceTree = "<group>"; };
+		B569D62D14C8CE6E00F46D4B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B569D62F14C8CE6E00F46D4B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B569D63114C8CE6E00F46D4B /* CardinalSpline-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CardinalSpline-Prefix.pch"; sourceTree = "<group>"; };
+		B569D63214C8CE6E00F46D4B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B569D63314C8CE6E00F46D4B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B569D63514C8CE6E00F46D4B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B569D63614C8CE6E00F46D4B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B569D63914C8CE6E00F46D4B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		B569D64314C8CF0200F46D4B /* CatmullRomSplineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatmullRomSplineView.h; sourceTree = "<group>"; };
+		B569D64414C8CF0200F46D4B /* CatmullRomSplineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatmullRomSplineView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B569D61C14C8CE6E00F46D4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B569D62414C8CE6E00F46D4B /* UIKit.framework in Frameworks */,
+				B569D62614C8CE6E00F46D4B /* Foundation.framework in Frameworks */,
+				B569D62814C8CE6E00F46D4B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B569D61414C8CE6D00F46D4B = {
+			isa = PBXGroup;
+			children = (
+				B569D62914C8CE6E00F46D4B /* CardinalSpline */,
+				B569D62214C8CE6E00F46D4B /* Frameworks */,
+				B569D62014C8CE6E00F46D4B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B569D62014C8CE6E00F46D4B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B569D61F14C8CE6E00F46D4B /* CardinalSpline.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B569D62214C8CE6E00F46D4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B569D62314C8CE6E00F46D4B /* UIKit.framework */,
+				B569D62514C8CE6E00F46D4B /* Foundation.framework */,
+				B569D62714C8CE6E00F46D4B /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B569D62914C8CE6E00F46D4B /* CardinalSpline */ = {
+			isa = PBXGroup;
+			children = (
+				B569D64314C8CF0200F46D4B /* CatmullRomSplineView.h */,
+				B569D64414C8CF0200F46D4B /* CatmullRomSplineView.m */,
+				B569D63214C8CE6E00F46D4B /* AppDelegate.h */,
+				B569D63314C8CE6E00F46D4B /* AppDelegate.m */,
+				B569D63514C8CE6E00F46D4B /* ViewController.h */,
+				B569D63614C8CE6E00F46D4B /* ViewController.m */,
+				B569D63814C8CE6E00F46D4B /* ViewController.xib */,
+				B569D62A14C8CE6E00F46D4B /* Supporting Files */,
+			);
+			path = CardinalSpline;
+			sourceTree = "<group>";
+		};
+		B569D62A14C8CE6E00F46D4B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B569D62B14C8CE6E00F46D4B /* CardinalSpline-Info.plist */,
+				B569D62C14C8CE6E00F46D4B /* InfoPlist.strings */,
+				B569D62F14C8CE6E00F46D4B /* main.m */,
+				B569D63114C8CE6E00F46D4B /* CardinalSpline-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B569D61E14C8CE6E00F46D4B /* CardinalSpline */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B569D63D14C8CE6E00F46D4B /* Build configuration list for PBXNativeTarget "CardinalSpline" */;
+			buildPhases = (
+				B569D61B14C8CE6E00F46D4B /* Sources */,
+				B569D61C14C8CE6E00F46D4B /* Frameworks */,
+				B569D61D14C8CE6E00F46D4B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CardinalSpline;
+			productName = CardinalSpline;
+			productReference = B569D61F14C8CE6E00F46D4B /* CardinalSpline.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B569D61614C8CE6D00F46D4B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = B569D61914C8CE6D00F46D4B /* Build configuration list for PBXProject "CardinalSpline" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B569D61414C8CE6D00F46D4B;
+			productRefGroup = B569D62014C8CE6E00F46D4B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B569D61E14C8CE6E00F46D4B /* CardinalSpline */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B569D61D14C8CE6E00F46D4B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B569D62E14C8CE6E00F46D4B /* InfoPlist.strings in Resources */,
+				B569D63A14C8CE6E00F46D4B /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B569D61B14C8CE6E00F46D4B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B569D63014C8CE6E00F46D4B /* main.m in Sources */,
+				B569D63414C8CE6E00F46D4B /* AppDelegate.m in Sources */,
+				B569D63714C8CE6E00F46D4B /* ViewController.m in Sources */,
+				B569D64514C8CF0200F46D4B /* CatmullRomSplineView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B569D62C14C8CE6E00F46D4B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B569D62D14C8CE6E00F46D4B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B569D63814C8CE6E00F46D4B /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B569D63914C8CE6E00F46D4B /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B569D63B14C8CE6E00F46D4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B569D63C14C8CE6E00F46D4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B569D63E14C8CE6E00F46D4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CardinalSpline/CardinalSpline-Prefix.pch";
+				INFOPLIST_FILE = "CardinalSpline/CardinalSpline-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B569D63F14C8CE6E00F46D4B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CardinalSpline/CardinalSpline-Prefix.pch";
+				INFOPLIST_FILE = "CardinalSpline/CardinalSpline-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B569D61914C8CE6D00F46D4B /* Build configuration list for PBXProject "CardinalSpline" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B569D63B14C8CE6E00F46D4B /* Debug */,
+				B569D63C14C8CE6E00F46D4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B569D63D14C8CE6E00F46D4B /* Build configuration list for PBXNativeTarget "CardinalSpline" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B569D63E14C8CE6E00F46D4B /* Debug */,
+				B569D63F14C8CE6E00F46D4B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B569D61614C8CE6D00F46D4B /* Project object */;
+}
