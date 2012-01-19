@@ -10,6 +10,9 @@
 
 @interface CatmullRomSplineView : UIView {
     CGPoint *dragPoint;
+    
+    UIColor *splineColor;
+    UIColor *handleColor;
 }
 
 @property (nonatomic, assign) CGPoint handle1;

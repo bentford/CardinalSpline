@@ -35,6 +35,9 @@
         
         self.point1 = CGPointMake(100.0f, 190.0f);
         self.point2 = CGPointMake(220.0f, 270.0f);
+     
+        splineColor = [UIColor colorWithRed:62.0f/255.0f green:130.0f/255.0f blue:219.0f/255.0f alpha:1.0f];
+        handleColor = [UIColor colorWithRed:27.0f/255.0f green:57.0f/255.0f blue:95.0f/255.0f alpha:1.0f];
         
         UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
         pan.cancelsTouchesInView = NO;
@@ -48,8 +51,19 @@
     
     CGContextRef context = UIGraphicsGetCurrentContext();
     
+    // draw handle bars
+    CGContextSetStrokeColorWithColor(context, handleColor.CGColor);
+    CGContextMoveToPoint(context, handle1.x, handle1.y);
+    CGContextAddLineToPoint(context, point1.x, point1.y);
+    CGContextStrokePath(context);
+    
+    CGContextMoveToPoint(context, handle2.x, handle2.y);
+    CGContextAddLineToPoint(context, point2.x, point2.y);
+    CGContextStrokePath(context); 
+    
+    // draw spline
     CGContextSetLineWidth(context, 2.0f);
-    CGContextSetStrokeColorWithColor(context, [UIColor blueColor].CGColor);
+    CGContextSetStrokeColorWithColor(context, splineColor.CGColor);
     CGContextMoveToPoint(context, point1.x, point1.y);
     for( CGFloat t = 0.0f; t < 1.01f; t += 0.05f ) {
         CGPoint multipliedHandle1;
@@ -81,13 +95,17 @@
     }
     CGContextStrokePath(context);
     
-    CGContextSetFillColorWithColor(context, [UIColor blueColor].CGColor);
+    // draw spline dots
+    CGContextSetFillColorWithColor(context, splineColor.CGColor);
     CGContextFillEllipseInRect(context, [self rectForPoint:point1 size:kPointSize]);
     CGContextFillEllipseInRect(context, [self rectForPoint:point2 size:kPointSize]);
 
-    CGContextSetFillColorWithColor(context, [UIColor blackColor].CGColor);
+    // draw handleDots
+    CGContextSetFillColorWithColor(context, handleColor.CGColor);
     CGContextFillEllipseInRect(context, [self rectForPoint:handle1 size:kPointSize]);
     CGContextFillEllipseInRect(context, [self rectForPoint:handle2 size:kPointSize]);
+
+   
 }
 
 
