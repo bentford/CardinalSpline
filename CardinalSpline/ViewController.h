@@ -11,6 +11,8 @@
 @class CatmullRomSplineView;
 @interface ViewController : UIViewController {
     CatmullRomSplineView *splineView;
+    IBOutlet UIView *headerView;
+    IBOutlet UILabel *instructionsLabel;
 }
 
 @end

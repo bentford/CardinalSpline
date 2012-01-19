@@ -14,8 +14,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-    splineView = [[CatmullRomSplineView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
-    [self.view addSubview:splineView];
+    splineView = [[CatmullRomSplineView alloc] initWithFrame:CGRectMake(0, headerView.frame.size.height, self.view.bounds.size.width, self.view.bounds.size.height-headerView.frame.size.height)];
+    [self.view insertSubview:splineView belowSubview:instructionsLabel];
 }
 
 @end
