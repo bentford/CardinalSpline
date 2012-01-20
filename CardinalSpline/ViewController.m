@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "CatmullRomSplineView.h"
+#import "AboutViewController.h"
 
 @implementation ViewController
 
@@ -18,4 +19,8 @@
     [self.view insertSubview:splineView belowSubview:instructionsLabel];
 }
 
+- (IBAction)helpButtonPressed:(id)sender {
+    AboutViewController *aboutViewController = [[AboutViewController alloc] init];
+    [self presentViewController:aboutViewController animated:YES completion:nil];
+}
 @end

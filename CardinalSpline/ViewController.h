@@ -15,4 +15,5 @@
     IBOutlet UILabel *instructionsLabel;
 }
 
+- (IBAction)helpButtonPressed:(id)sender;
 @end

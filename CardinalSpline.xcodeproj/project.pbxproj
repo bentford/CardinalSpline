@@ -16,6 +16,11 @@
 		B569D63714C8CE6E00F46D4B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B569D63614C8CE6E00F46D4B /* ViewController.m */; };
 		B569D63A14C8CE6E00F46D4B /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B569D63814C8CE6E00F46D4B /* ViewController.xib */; };
 		B569D64514C8CF0200F46D4B /* CatmullRomSplineView.m in Sources */ = {isa = PBXBuildFile; fileRef = B569D64414C8CF0200F46D4B /* CatmullRomSplineView.m */; };
+		B569D64914C8E77C00F46D4B /* HelpIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B569D64714C8E77C00F46D4B /* HelpIcon.png */; };
+		B569D64A14C8E77C00F46D4B /* HelpIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B569D64814C8E77C00F46D4B /* HelpIcon@2x.png */; };
+		B569D64D14C8E7FB00F46D4B /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B569D64C14C8E7FA00F46D4B /* AboutViewController.m */; };
+		B569D64F14C8E82D00F46D4B /* AboutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B569D64E14C8E82D00F46D4B /* AboutView.xib */; };
+		B569D65114C8EAAC00F46D4B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B569D65014C8EAAC00F46D4B /* Default.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +39,12 @@
 		B569D63914C8CE6E00F46D4B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		B569D64314C8CF0200F46D4B /* CatmullRomSplineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatmullRomSplineView.h; sourceTree = "<group>"; };
 		B569D64414C8CF0200F46D4B /* CatmullRomSplineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatmullRomSplineView.m; sourceTree = "<group>"; };
+		B569D64714C8E77C00F46D4B /* HelpIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HelpIcon.png; sourceTree = SOURCE_ROOT; };
+		B569D64814C8E77C00F46D4B /* HelpIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HelpIcon@2x.png"; sourceTree = SOURCE_ROOT; };
+		B569D64B14C8E7FA00F46D4B /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		B569D64C14C8E7FA00F46D4B /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		B569D64E14C8E82D00F46D4B /* AboutView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutView.xib; sourceTree = "<group>"; };
+		B569D65014C8EAAC00F46D4B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +91,7 @@
 		B569D62914C8CE6E00F46D4B /* CardinalSpline */ = {
 			isa = PBXGroup;
 			children = (
+				B569D64614C8E76A00F46D4B /* Images */,
 				B569D64314C8CF0200F46D4B /* CatmullRomSplineView.h */,
 				B569D64414C8CF0200F46D4B /* CatmullRomSplineView.m */,
 				B569D63214C8CE6E00F46D4B /* AppDelegate.h */,
@@ -87,6 +99,9 @@
 				B569D63514C8CE6E00F46D4B /* ViewController.h */,
 				B569D63614C8CE6E00F46D4B /* ViewController.m */,
 				B569D63814C8CE6E00F46D4B /* ViewController.xib */,
+				B569D64B14C8E7FA00F46D4B /* AboutViewController.h */,
+				B569D64C14C8E7FA00F46D4B /* AboutViewController.m */,
+				B569D64E14C8E82D00F46D4B /* AboutView.xib */,
 				B569D62A14C8CE6E00F46D4B /* Supporting Files */,
 			);
 			path = CardinalSpline;
@@ -101,6 +116,16 @@
 				B569D63114C8CE6E00F46D4B /* CardinalSpline-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B569D64614C8E76A00F46D4B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B569D65014C8EAAC00F46D4B /* Default.png */,
+				B569D64714C8E77C00F46D4B /* HelpIcon.png */,
+				B569D64814C8E77C00F46D4B /* HelpIcon@2x.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +180,10 @@
 			files = (
 				B569D62E14C8CE6E00F46D4B /* InfoPlist.strings in Resources */,
 				B569D63A14C8CE6E00F46D4B /* ViewController.xib in Resources */,
+				B569D64914C8E77C00F46D4B /* HelpIcon.png in Resources */,
+				B569D64A14C8E77C00F46D4B /* HelpIcon@2x.png in Resources */,
+				B569D64F14C8E82D00F46D4B /* AboutView.xib in Resources */,
+				B569D65114C8EAAC00F46D4B /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +198,7 @@
 				B569D63414C8CE6E00F46D4B /* AppDelegate.m in Sources */,
 				B569D63714C8CE6E00F46D4B /* ViewController.m in Sources */,
 				B569D64514C8CF0200F46D4B /* CatmullRomSplineView.m in Sources */,
+				B569D64D14C8E7FB00F46D4B /* AboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
