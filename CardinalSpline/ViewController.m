@@ -23,4 +23,12 @@
     AboutViewController *aboutViewController = [[AboutViewController alloc] init];
     [self presentViewController:aboutViewController animated:YES completion:nil];
 }
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
+    return YES;
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+    //[splineView setNeedsDisplay];
+}
 @end

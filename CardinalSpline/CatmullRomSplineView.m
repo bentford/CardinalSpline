@@ -108,6 +108,10 @@
    
 }
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    [self setNeedsDisplay];
+}
 
 @end
 
