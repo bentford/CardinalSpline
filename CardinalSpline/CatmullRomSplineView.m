@@ -16,6 +16,8 @@
 - (CGFloat)catmullRomForTime:(CGFloat)t p0:(CGFloat)P0 p1:(CGFloat)P1 p2:(CGFloat)P2 p3:(CGFloat)P3;
 
 - (CGRect)rectForPoint:(CGPoint)somePoint size:(CGFloat)size;
+
+- (CGPoint)centerPoint:(CGPoint)point inRect:(CGRect)rect;
 @end
 
 @implementation CatmullRomSplineView
@@ -30,11 +32,11 @@
     if (self) {
         self.backgroundColor = [UIColor whiteColor];
         self.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
-        self.handle1 = CGPointMake(10.0f, 250.0f);
-        self.handle2 = CGPointMake(300.0f, 240.0f);
+        self.handle1 = CGPointMake(10.0f, 230.0f);
+        self.handle2 = CGPointMake(300.0f, 220.0f);
         
-        self.point1 = CGPointMake(100.0f, 190.0f);
-        self.point2 = CGPointMake(220.0f, 270.0f);
+        self.point1 = CGPointMake(100.0f, 170.0f);
+        self.point2 = CGPointMake(220.0f, 250.0f);
      
         splineColor = [UIColor colorWithRed:62.0f/255.0f green:130.0f/255.0f blue:219.0f/255.0f alpha:1.0f];
         handleColor = [UIColor colorWithRed:27.0f/255.0f green:57.0f/255.0f blue:95.0f/255.0f alpha:1.0f];
@@ -110,6 +112,12 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
+    
+    point1 = [self centerPoint:point1 inRect:self.bounds];
+    point2 = [self centerPoint:point2 inRect:self.bounds];
+    handle1 = [self centerPoint:handle1 inRect:self.bounds];
+    handle2 = [self centerPoint:handle2 inRect:self.bounds];
+    
     [self setNeedsDisplay];
 }
 
@@ -156,5 +164,9 @@
         }
         [self setNeedsDisplay];
     } 
+}
+
+- (CGPoint)centerPoint:(CGPoint)point inRect:(CGRect)rect {
+    return point;
 }
 @end
